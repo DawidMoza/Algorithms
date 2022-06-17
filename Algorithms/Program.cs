@@ -45,3 +45,16 @@ graph2.Add((2, 5, 4));
 djk.Item1.ToList().ForEach(x => Console.Write($"{x} "));
 Console.WriteLine();
 djk.Item2.ToList().ForEach(x => Console.Write($"{x} "));
+
+Console.WriteLine();
+Console.WriteLine();
+
+int[] t1 = { 7, 3, 2, 7, 1, 3, 2, 2, 9};
+int[] t2 = { 7, 3, 7, 1, 3, 2, 2, 9};
+
+QuickSort.Sort(t1);
+QuickSort.Sort(t2);
+
+t1.ToList().ForEach(x => Console.Write($"{x} "));
+Console.WriteLine();
+t2.ToList().ForEach(x => Console.Write($"{x} "));
