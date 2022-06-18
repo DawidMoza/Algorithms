@@ -52,8 +52,18 @@ Console.WriteLine();
 int[] t1 = { 7, 3, 2, 7, 1, 3, 2, 2, 9};
 int[] t2 = { 7, 3, 7, 1, 3, 2, 2, 9};
 
-QuickSort.Sort(t1);
-QuickSort.Sort(t2);
+int[] m1 = MergeSort.SortRecursive(t1);
+int[] m2 = MergeSort.SortRecursive(t2);
+
+m1.ToList().ForEach(x => Console.Write($"{x} "));
+Console.WriteLine();
+m2.ToList().ForEach(x => Console.Write($"{x} "));
+
+Console.WriteLine();
+Console.WriteLine();
+
+MergeSort.SortIterative(t1);
+MergeSort.SortIterative(t2);
 
 t1.ToList().ForEach(x => Console.Write($"{x} "));
 Console.WriteLine();
