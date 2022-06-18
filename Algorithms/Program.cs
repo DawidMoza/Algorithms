@@ -49,15 +49,25 @@ djk.Item2.ToList().ForEach(x => Console.Write($"{x} "));
 Console.WriteLine();
 Console.WriteLine();
 
-int[] t1 = { 7, 3, 2, 7, 1, 3, 2, 2, 9};
-int[] t2 = { 7, 3, 7, 1, 3, 2, 2, 9};
+int[] t1 = { 707, 23, 42, 7000, 1, 23, 32, 302, 9};
+int[] t2 = { 27, 3, 37, 41, 3, 5552, 277, 6669};
 
-int[] m1 = MergeSort.SortRecursive(t1);
-int[] m2 = MergeSort.SortRecursive(t2);
+int[] m1 = NoComparisonSorts.BucketSort(t1);
+int[] m2 = NoComparisonSorts.BucketSort(t2);
 
 m1.ToList().ForEach(x => Console.Write($"{x} "));
 Console.WriteLine();
 m2.ToList().ForEach(x => Console.Write($"{x} "));
+
+Console.WriteLine();
+Console.WriteLine();
+
+//t1 = MergeSort.SortRecursive(t1);
+//t2 = MergeSort.SortRecursive(t2);
+//
+//t1.ToList().ForEach(x => Console.Write($"{x} "));
+//Console.WriteLine();
+//t2.ToList().ForEach(x => Console.Write($"{x} "));
 
 Console.WriteLine();
 Console.WriteLine();

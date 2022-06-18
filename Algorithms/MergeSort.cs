@@ -11,11 +11,12 @@
         }
 
         internal static void SortIterative(int[] input) {
-            for (int i = 1; i < input.Length - 1; i *= 2) {
-                for (int j = 0; j < input.Length - 1; j += 2 * i) {
-                    int mid = Math.Min(j + i - 1, input.Length - 1);
+            for (int i = 1; i < input.Length; i *= 2) {
+                for (int j = 0; j < input.Length; j += i * 2) {
+                    int mid1 = Math.Min(j + i - 1, input.Length - 1);
+                    int mid2 = Math.Min(j + i, input.Length - 1);
                     int end = Math.Min(j + 2 * i - 1, input.Length - 1);
-                    Merge(input, j, mid, mid + 1, end);
+                    Merge(input, j, mid1, mid2, end);
                 }
             }
         }
